@@ -6,7 +6,9 @@ const phrases = [
   "Web Developer (Front End and Back End)",
   "UI/UX Designer",
   "Java | React | Python",
-  "I build beautiful websites"
+  "I build beautiful websites",
+  "Make your dreams come true",
+  "Thanks for visiting"
 ];
 let currentPhrase = 0;
 let currentChar = 0;
