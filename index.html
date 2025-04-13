@@ -1,12 +1,12 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saravanan B - Web Developer</title>
+  <title>Saravanan B - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/6744203d98.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="hero">
@@ -19,7 +19,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="auth-buttons">
-        <button onclick="loginWithGoogle()">Login with Google</button>
         <button onclick="stayLoggedOut()">Stay Logged Out</button>
         <button id="toggle-dark">🌙</button>
       </div>
@@ -30,61 +29,71 @@
     </div>
   </header>
 
+  <!-- Profile card displayed by default -->
+  <section id="profile-card" class="section show">
+    <div class="card">
+      <img src="profile.jpg" alt="Profile Photo" class="card-img">
+      <h3>Saravanan B</h3>
+      <p>Web Developer | Script Writer | UI/UX Designer</p>
+      <p>Location: Tamil Nadu, India</p>
+      <div class="icons">
+        <a href="">
+            <i class="fa-solid fa-house fa-2x"></i>
+        </a>
+  
+        <a href="https://twitter.com">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+        </a>
+  
+        <a href="https://www.youtube.com">
+            <i class="fa-brands fa-youtube fa-2x"></i>
+        </a>
+  
+        <a href="https://www.instagram.com">
+            <i class="fa-brands fa-square-instagram fa-2x"></i>
+        </a>
+    </div>
+    </div>
+  </section>
+
   <section id="about" class="section">
+    <button class="close-btn" onclick="hideSection('about')">×</button>
     <h2>About Me</h2>
     <p>Hi! I'm Saravanan, a passionate web developer skilled in both frontend and backend. I love crafting clean, user-friendly websites and learning new technologies.</p>
-    <button onclick="hideSection('about')">Close</button>
   </section>
 
   <section id="skills" class="section">
+    <button class="close-btn" onclick="hideSection('skills')">×</button>
     <h2>Skills</h2>
     <ul class="skills-list">
-      <li>Java</li>
-      <li>React</li>
-      <li>Html</li>
-      <li>Css</li>
-      <li>Javascript</li>
-      <li>Python</li>
-      <li>JUnit</li>
-      <li>UI/UX Design</li>
-      <li>Script Writing</li>
+      <li>Java</li><li>React</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+      <li>Python</li><li>JUnit</li><li>UI/UX Design</li><li>Script Writing</li>
     </ul>
-    <button onclick="hideSection('skills')">Close</button>
   </section>
 
   <section id="projects" class="section">
+    <button class="close-btn" onclick="hideSection('projects')">×</button>
     <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">Login page</div>
+    <div class ="project-grid">
+      <div class="project-card">Login Page</div>
       <div class="project-card">User Profile Card</div>
-      <div class="project-card">Shop poster using (Html,Css)</div>
+      <div class="project-card">Shop Poster</div>
     </div>
-    <button onclick="hideSection('projects')">Close</button>
   </section>
 
   <section id="contact" class="section">
+    <button class="close-btn" onclick="hideSection('contact')">×</button>
     <h2>Contact</h2>
     <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Address" required></textarea>
+      <input type="text" placeholder="Enter Your Name" required />
+      <input type="email" placeholder="Enter Email" required />
+      <textarea placeholder="Enter Address" required></textarea>
       <button type="submit">Send</button>
-    </form>
-    <div id="contact-info"></div>
-    <button onclick="hideSection('contact')">Close</button>
+    </form>      
   </section>
 
   <footer>
     <p>&copy; 2025 Saravanan B</p>
   </footer>
-
-  <!-- Basic login modal -->
-  <div id="login-modal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Login</h3>
-      <input type="email" placeholder="Enter your email" />
-      <button onclick="closeModal()">Login</button>
-    </div>
-  </div>
 </body>
 </html>
